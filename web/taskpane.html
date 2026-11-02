@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ETDP APA 7 Research Assistant</title>
+  <link rel="stylesheet" href="./taskpane.css" />
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+</head>
+<body>
+  <header>
+    <h1>ETDP APA 7 Assistant</h1>
+    <p>Paraphrase, find sources, cite in APA 7, and update Word references.</p>
+  </header>
+
+  <section class="panel">
+    <h2>Selection</h2>
+    <div class="row">
+      <button id="btn-load-selection">Load Selected Text</button>
+      <button id="btn-paraphrase">Paraphrase + Replace</button>
+    </div>
+    <textarea id="selection-text" placeholder="Selected text appears here..."></textarea>
+    <div class="inline-fields">
+      <label for="paraphrase-provider">Paraphrase Provider</label>
+      <select id="paraphrase-provider">
+        <option value="etdp">ETDP API (Gemma 4:26B / Local LLM - Recommended)</option>
+        <option value="gemini">Google Gemini API key</option>
+        <option value="none">No paraphrase provider</option>
+      </select>
+    </div>
+    <div class="inline-fields" id="field-etdp-url">
+      <label for="etdp-url">ETDP API Base URL</label>
+      <input id="etdp-url" type="text" value="http://127.0.0.1:5299" />
+    </div>
+    <div class="inline-fields" id="field-gemini-model">
+      <label for="gemini-model">Google Gemini Model</label>
+      <input id="gemini-model" type="text" value="gemini-2.5-flash" />
+    </div>
+    <div class="inline-fields" id="field-gemini-key">
+      <label for="gemini-key">Google Gemini API Key</label>
+      <input id="gemini-key" type="password" placeholder="AIzaSy..." />
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Sources</h2>
+    <div class="row">
+      <button id="btn-search-sources">Search Online Sources</button>
+      <button id="btn-refresh-word-sources">Sync All Sources to Word References</button>
+    </div>
+    <div id="source-results" class="list"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Citations</h2>
+    <div class="row">
+      <button id="btn-insert-citation">Insert Citation at Cursor</button>
+      <button id="btn-insert-bibliography">Insert Bibliography</button>
+    </div>
+    <p class="note">
+      If Word reference APIs are unavailable in your client build, the add-in falls back to
+      APA text insertion and a generated References section.
+    </p>
+  </section>
+
+  <section class="panel">
+    <h2>Status</h2>
+    <pre id="status">Ready.</pre>
+  </section>
+
+  <script src="./taskpane.js"></script>
+</body>
+</html>

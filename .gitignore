@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+package-lock.json.bak
+
+# Logs
+*.log
+apa_server.log
+apa_server.out.log
+
+# Temporary and cache files
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+.vscode/
+.idea/
+
+# Local Dev Certs
+*.pfx
+*.cer
+*.key
+*.crt

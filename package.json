@@ -1,0 +1,20 @@
+{
+  "name": "etdp-word-apa-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Word 365 add-in for paraphrasing, source discovery, and APA 7 citation workflows.",
+  "scripts": {
+    "certs": "office-addin-dev-certs install",
+    "start": "node server.js",
+    "validate": "office-addin-manifest validate manifest.xml",
+    "sideload:desktop": "office-addin-debugging start manifest.xml desktop --app word --no-debug --dev-server \"npm start\" --dev-server-port 3000",
+    "sideload:web": "office-addin-debugging start manifest.xml web --app word --no-debug --dev-server \"npm start\" --dev-server-port 3000",
+    "unsideload:desktop": "office-addin-debugging stop manifest.xml desktop",
+    "unsideload:web": "office-addin-debugging stop manifest.xml web"
+  },
+  "devDependencies": {
+    "office-addin-debugging": "^5.0.4",
+    "office-addin-dev-certs": "^1.12.3",
+    "office-addin-manifest": "^1.13.4"
+  }
+}

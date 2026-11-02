@@ -1,0 +1,149 @@
+:root {
+  --bg: #f5f5f2;
+  --panel: #ffffff;
+  --ink: #1f2a30;
+  --muted: #596b74;
+  --accent: #0f6d5d;
+  --border: #d8dfd9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 12px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  line-height: 1.35;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+header p {
+  margin: 4px 0 10px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.panel h2 {
+  margin: 0 0 8px;
+  font-size: 0.98rem;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+button {
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  border-radius: 6px;
+  padding: 7px 9px;
+  cursor: pointer;
+  font-size: 0.82rem;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+textarea {
+  width: 100%;
+  min-height: 92px;
+  resize: vertical;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 0.85rem;
+}
+
+.inline-fields {
+  margin-top: 6px;
+}
+
+.inline-fields label {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.inline-fields input,
+.inline-fields select {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 7px;
+  font-size: 0.82rem;
+}
+
+.list {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  max-height: 220px;
+  overflow: auto;
+  padding: 6px;
+}
+
+.source-item {
+  border-bottom: 1px dashed #d9dfdc;
+  padding: 6px 2px;
+}
+
+.source-item:last-child {
+  border-bottom: 0;
+}
+
+.source-title {
+  font-size: 0.84rem;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.source-meta {
+  font-size: 0.77rem;
+  color: var(--muted);
+}
+
+.source-citation {
+  font-size: 0.78rem;
+  margin-top: 4px;
+}
+
+.note {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+#status {
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #f7faf9;
+  min-height: 64px;
+  max-height: 160px;
+  overflow: auto;
+  padding: 8px;
+  font-size: 0.76rem;
+  white-space: pre-wrap;
+}
